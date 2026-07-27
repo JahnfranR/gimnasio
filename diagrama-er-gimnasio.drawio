@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-07-27T23:00:00.000Z" agent="5.0" etag="" version="24.0.0" type="device">
+  <diagram id="diagrama-er-gimnasio" name="Diagrama ER Gimnasio">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Tabla miembros -->
+        <mxCell id="2" value="miembros" style="swimlane;fontStyle=1;align=center;startSize=26;fillColor=#2c3e50;fontColor=#ffffff;strokeColor=#2c3e50;" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="220" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="PK&#xa;id SERIAL" style="text;strokeColor=none;fillColor=#f1c40f;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="2">
+          <mxGeometry y="26" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="nombre VARCHAR(100)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+          <mxGeometry y="56" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="email VARCHAR(150) UNIQUE" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+          <mxGeometry y="82" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="telefono VARCHAR(20)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+          <mxGeometry y="108" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="documento VARCHAR(20) UNIQUE" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+          <mxGeometry y="134" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="fecha_registro DATE" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+          <mxGeometry y="160" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="estado VARCHAR(20)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+          <mxGeometry y="186" width="220" height="26" as="geometry" />
+        </mxCell>
+
+        <!-- Tabla asistencias -->
+        <mxCell id="10" value="asistencias" style="swimlane;fontStyle=1;align=center;startSize=26;fillColor=#2c3e50;fontColor=#ffffff;strokeColor=#2c3e50;" vertex="1" parent="1">
+          <mxGeometry x="450" y="100" width="220" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="PK&#xa;id SERIAL" style="text;strokeColor=none;fillColor=#f1c40f;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="10">
+          <mxGeometry y="26" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="FK&#xa;miembro_id INT" style="text;strokeColor=none;fillColor=#3498db;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#ffffff;" vertex="1" parent="10">
+          <mxGeometry y="56" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="fecha DATE" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="10">
+          <mxGeometry y="86" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="hora_entrada TIME" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="10">
+          <mxGeometry y="112" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="hora_salida TIME" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="10">
+          <mxGeometry y="138" width="220" height="26" as="geometry" />
+        </mxCell>
+
+        <!-- Tabla planes -->
+        <mxCell id="16" value="planes" style="swimlane;fontStyle=1;align=center;startSize=26;fillColor=#2c3e50;fontColor=#ffffff;strokeColor=#2c3e50;" vertex="1" parent="1">
+          <mxGeometry x="275" y="380" width="220" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="PK&#xa;id SERIAL" style="text;strokeColor=none;fillColor=#f1c40f;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#000000;" vertex="1" parent="16">
+          <mxGeometry y="26" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="nombre VARCHAR(100)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="16">
+          <mxGeometry y="56" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="precio DECIMAL(10,2)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="16">
+          <mxGeometry y="82" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="duracion_dias INT" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="16">
+          <mxGeometry y="108" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="descripcion TEXT" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="16">
+          <mxGeometry y="134" width="220" height="26" as="geometry" />
+        </mxCell>
+
+        <!-- Relacion miembros -> asistencias (1:N) -->
+        <mxCell id="22" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="3" target="11" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="11" target="3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Leyenda -->
+        <mxCell id="24" value="Leyenda:" style="text;fontStyle=1;align=left;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="100" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f1c40f;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="750" y="140" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="Primary Key (PK)" style="text;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="780" y="140" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3498db;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="750" y="170" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="Foreign Key (FK)" style="text;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="780" y="170" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="750" y="200" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="Campo normal" style="text;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="780" y="200" width="120" height="20" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
