@@ -14,7 +14,16 @@ export default function AsistenciaForm() {
   }, [miembroId])
 
   async function fetchMiembro() {
-    const { data } = await supabase.from('miembros').select('*').eq('id', miembroId).single()
+    if (!miembroId) {
+      setMiembro({ nombre: 'N/A', documento: 'N/A', estado: 'activo' })
+      return
+    }
+    const { data, error } = await supabase.from('miembros').select('*').eq('id', miembroId).single()
+    if (error) {
+      alert('Error: Miembro no encontrado')
+      navigate('/')
+      return
+    }
     if (data) setMiembro(data)
   }
 
