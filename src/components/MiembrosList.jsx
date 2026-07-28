@@ -59,7 +59,7 @@ export default function MiembrosList() {
                 <td>{m.documento}</td>
                 <td><span className={`badge badge-${m.estado}`}>{m.estado}</span></td>
                 <td>
-                  <Link to={`/asistencias/${m.id}/nueva`} className="btn btn-small btn-primary">Registrar Entrada</Link>
+                  <Link to={`/asistencias/registrar/${m.id}`} className="btn btn-small btn-primary">Registrar Entrada</Link>
                   <Link to={`/miembros/${m.id}`} className="btn btn-small">Ver</Link>
                   <Link to={`/miembros/${m.id}/editar`} className="btn btn-small btn-secondary">Editar</Link>
                   <button onClick={() => handleDelete(m.id)} className="btn btn-small btn-danger">Eliminar</button>

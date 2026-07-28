@@ -50,7 +50,7 @@ export default function MiembrosDetail() {
       </div>
 
       <div className="form-actions">
-        <Link to={`/asistencias/${id}/nueva`} className="btn btn-primary">Registrar Asistencia</Link>
+        <Link to={`/asistencias/registrar/${id}`} className="btn btn-primary">Registrar Asistencia</Link>
         <Link to={`/miembros/${id}/editar`} className="btn btn-secondary">Editar</Link>
         <button onClick={handleDelete} className="btn btn-danger">Eliminar</button>
         <Link to="/" className="btn">Volver</Link>

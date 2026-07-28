@@ -25,7 +25,7 @@ function App() {
             <Route path="/miembros/:id/editar" element={<MiembrosForm />} />
             <Route path="/asistencias" element={<AsistenciaList />} />
             <Route path="/asistencias/nueva" element={<AsistenciaForm />} />
-            <Route path="/asistencias/:miembroId/nueva" element={<AsistenciaForm />} />
+            <Route path="/asistencias/registrar/:miembroId" element={<AsistenciaForm />} />
           </Routes>
         </main>
       </div>
