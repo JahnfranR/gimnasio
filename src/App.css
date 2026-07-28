@@ -204,3 +204,28 @@ tr:hover {
 .detail-card p:last-child {
   border-bottom: none;
 }
+
+.filter-group {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.filter-group input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.stats {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #ecf0f1;
+  border-radius: 4px;
+}
